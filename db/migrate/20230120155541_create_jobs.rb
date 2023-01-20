@@ -3,5 +3,6 @@ class CreateJobs < ActiveRecord::Migration[6.1]
     create_table :jobs do |t|
       t.string :name
       t.integer :company_id
+    end
   end
 end
