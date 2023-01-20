@@ -7,7 +7,7 @@ class CompaniesController < ApplicationController
 
     #show route
     get '/companies/:id' do
-        company = Company.find_by(id: param(:id))
+        company = Company.find_by(id: params[:id])
         if company
             company.to_json(include: :jobs)
         else
