@@ -14,4 +14,7 @@ class CompaniesController < ApplicationController
             "404 - Company not found"
         end
     end
+
+    #company form
+    
 end
