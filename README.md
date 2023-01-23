@@ -26,4 +26,8 @@ This will run your server on port http://localhost:9292.
 Frontend Setup
 Your backend and your frontend should be in two different repositories.
 
+<<<<<<< HEAD
 Create a new repository in a separate folder with Phase 3 React Frontendfor the frontend. To do this, cd out of the backend project directory, and use [create-react-app][] to generate the necessary code for your React frontend:
+=======
+Create a new repository in a separate folder with Phase 3 React Frontendfor the frontend. To do this, cd out of the backend project directory, and use [create-react-app][] to generate the necessary code for your React frontend:
+>>>>>>> 9c575f24a1cf9da6c731e2dc8c7ebf0953cd1ebb
