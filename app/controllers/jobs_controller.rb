@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
     
+    #CRUD ACTIONS
     #READ
     get '/jobs' do
         jobs = Job.all
@@ -9,19 +10,26 @@ class JobsController < ApplicationController
     #ADD
     post '/jobs' do
         job = Job.create(params)
+
         job.to_json
+    end
+
+    #show route
+    get '/jobs/:id' do
+        jobs = Job.find_by(id: params[:id])
+        if jobs
+            job.to_json(include: :jobs)
+        else
+            "404 - Company not found"
+        end
     end
 
     #DELETE
     delete '/jobs/:id' do
-        job = Job.find_by(:id params[:id])
+        job = Job.find(params[:id])
+        #binding.pry
         job.destroy
-    end 
-
-    #EDIT
-    patch '/jobs/:id' do
-        job = Job.find_by(:id params[:id])
-        job.update(name: params[:name])
         job.to_json
     end 
+
 end

@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-    #index route
+    #read all companies
     get '/companies' do
         companies = Company.all
         companies.to_json(include: :jobs)
